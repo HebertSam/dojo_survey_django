@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+</head>
+<body>
+    <form action="/process" method="post">
+        {% csrf_token %}
+    <label for="name">Your name</label><input type="text" name="name">
+    <label for="location">Dojo Location</label> <select name="location">
+        <option value="New York">New York</option>
+        <option value="Boston">Boston</option>
+        <option value="LA">LA</option>
+        <option value="Washington">Washington</option>
+    </select>
+    <label for="favlang">Favorite Language</label> <select name="favlang">
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="Go">Go</option>
+            <option value="Java">Java</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
